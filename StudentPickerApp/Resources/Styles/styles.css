@@ -1,0 +1,33 @@
+﻿/* Stylizacja całej strony */
+contentpage {
+    background-color: white;
+}
+
+/* Stylizacja przycisków */
+button {
+    background-color: #007aff;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Stylizacja pól tekstowych */
+entry {
+    border-color: #007aff;
+    border-width: 2px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Stylizacja listy uczniów */
+listview {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Stylizacja tekstu */
+label {
+    font-size: 18px;
+    color: #333;
+}

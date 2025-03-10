@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentPickerApp.AddStudentPage">
+    <StackLayout Padding="20">
+        <Picker x:Name="ClassPicker">
+            <Picker.ItemsSource>
+                <Binding Path="ClassNames"/>
+            </Picker.ItemsSource>
+        </Picker>
+        <Entry x:Name="NameEntry" Placeholder="Imię i nazwisko" />
+        <Entry x:Name="NumberEntry" Placeholder="Numer ucznia" Keyboard="Numeric" />
+        <Button Text="Dodaj ucznia" Clicked="OnAddStudentClicked" />
+    </StackLayout>
+</ContentPage>
