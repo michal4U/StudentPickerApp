@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentPickerApp.MainPage">
+    <ScrollView>
+    <StackLayout Padding="20">
+            <Label Text="Zarządzanie klasami oraz uczniami" StyleClass="HeadLabel" HorizontalOptions="Center"/>
+            <Entry x:Name="ClassNameEntry" StyleClass="ClassNameEntry" Placeholder="Wpisz nazwę klasy którą chcesz stworzyć" Margin="10"  />
+            <Button Text="Dodaj klasę" Clicked="OnAddClassClicked" Margin="10"  />
+            <Picker x:Name="ClassPicker" SelectedIndexChanged="OnClassChanged" Margin="10"  />
+            <Button Text="Usuń klasę" Clicked="OnRemoveClassClicked" Margin="10"  />
+            <Button Text="Dodaj ucznia" Clicked="OnAddStudentClicked" Margin="10"  />
+            <Frame HeightRequest="2" BackgroundColor="#3B2B43" CornerRadius="0" Padding="0" Margin="0" HasShadow="False" HorizontalOptions="Fill" />
+
+            <Label Text="Losowanie!" StyleClass="HeadLabel" HorizontalOptions="Center"/>
+            <Entry x:Name="LuckyNumberEntry" Placeholder="Wpisz szczęśliwy numerek" TextChanged="OnLuckyNumberChanged" Margin="10"  />
+        <Button Text="Losuj ucznia" Clicked="OnPickStudentClicked" Margin="10"  />
+            <Frame HeightRequest="2" BackgroundColor="#3B2B43" CornerRadius="0" Padding="0" Margin="0" HasShadow="False" HorizontalOptions="Fill" />
+            <Label Text="Lista obecności" StyleClass="HeadLabel" HorizontalOptions="Center"/>
+        <ListView x:Name="StudentsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10" ColumnDefinitions="Auto,*,Auto,Auto,Auto" RowDefinitions="Auto">
+                                <Label Text="Imię i Nazwisko:" StyleClass="NameLabel" VerticalOptions="Center" Grid.Column="0" />
+                                <Label Text="{Binding Name}" VerticalOptions="Center" Margin="5" Grid.Column="1" HorizontalOptions="Start"/>
+                                <Label Text="Obecność:" StyleClass="PresenceLabel" VerticalOptions="Center" Grid.Column="2"/>
+                                <Switch IsToggled="{Binding IsPresent}" Margin="5" Grid.Column="3"/>
+                                <Button Text="Usuń" StyleClass="DeleteButton"
+                                           Clicked="OnRemoveStudentClicked"
+                                           VerticalOptions="Center" 
+                                           HorizontalOptions="End"
+                                           WidthRequest="80"
+                                           Grid.Column="4"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
