@@ -32,6 +32,23 @@ public static class MauiProgram
                     IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(window);
                     var appWindow = AppWindow.GetFromWindowId(Win32Interop.GetWindowIdFromWindow(hWnd));
 
+                     var titleBar = appWindow.TitleBar;
+                        if (titleBar != null)
+                        {
+                           
+                            titleBar.BackgroundColor = Microsoft.UI.Colors.Green;
+                            titleBar.InactiveBackgroundColor = Microsoft.UI.Colors.DarkGreen;
+
+                            titleBar.ForegroundColor = Microsoft.UI.Colors.White;
+                            titleBar.InactiveForegroundColor = Microsoft.UI.Colors.LightGray;
+
+                            titleBar.ButtonBackgroundColor = Microsoft.UI.Colors.DarkRed;
+                            titleBar.ButtonForegroundColor = Microsoft.UI.Colors.White;
+                            titleBar.ButtonHoverBackgroundColor = Microsoft.UI.Colors.Red;
+                            titleBar.ButtonHoverForegroundColor = Microsoft.UI.Colors.White;
+                            titleBar.ButtonInactiveBackgroundColor = Microsoft.UI.Colors.Red;
+                            titleBar.ButtonInactiveForegroundColor = Microsoft.UI.Colors.LightGray;
+                        }
                     if (appWindow is not null)
                     {
                         Application.Current.MainPage.Title = "💀💀Maszyna Tortur💀💀";

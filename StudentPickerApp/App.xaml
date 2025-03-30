@@ -4,8 +4,8 @@
              xmlns:local="clr-namespace:StudentPickerApp"
              x:Class="StudentPickerApp.App">
     <Application.Resources>
-        <Color x:Key="TitleBarColor">DarkViolet</Color>
+        <Color x:Key="TitleBarColor">Green</Color>
         <Color x:Key="TitleBarTextColor">White</Color>
-        <StyleSheet Source="Resources/styles.css"/>
+        <StyleSheet Source="Resources/Styles/styles.css"/>
         </Application.Resources>
 </Application>
