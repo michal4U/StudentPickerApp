@@ -57,3 +57,43 @@ picker {
 .HeadLabel{
     font-size: 25;
 }
+#AddClassButton {
+    background-color: darkslategrey;
+    color: white;
+    padding: 10;
+    border: none;
+    border-radius: 5;
+    cursor: pointer;
+    margin: 5;
+    width: 250;
+}
+#AddStudentButtton {
+    background-color: darkslategrey;
+    color: white;
+    padding: 10;
+    border: none;
+    border-radius: 5;
+    cursor: pointer;
+    margin: 5;
+    width: 250;
+}
+#DeleteClass {
+    background-color: red;
+    color: white;
+    padding: 10;
+    border: none;
+    border-radius: 5;
+    cursor: pointer;
+    margin: 5;
+    width: 250;
+}
+#SelectStudent {
+    background-color: darkslategrey;
+    color: white;
+    padding: 10;
+    border: none;
+    border-radius: 5;
+    cursor: pointer;
+    margin: 5;
+    width: 250;
+}

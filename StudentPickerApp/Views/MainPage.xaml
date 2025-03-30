@@ -6,15 +6,16 @@
     <StackLayout Padding="20">
             <Label Text="Zarządzanie klasami oraz uczniami" StyleClass="HeadLabel" HorizontalOptions="Center"/>
             <Entry x:Name="ClassNameEntry" StyleClass="ClassNameEntry" Placeholder="Wpisz nazwę klasy którą chcesz stworzyć" Margin="10"  />
-            <Button Text="Dodaj klasę" Clicked="OnAddClassClicked" Margin="10"  />
+        
+            <Button x:Name="AddClassButton" Text="Dodaj klasę" Clicked="OnAddClassClicked" Margin="10"  />
+            <Button x:Name="AddStudentButton" Text="Dodaj ucznia" Clicked="OnAddStudentClicked" Margin="10"  />
             <Picker x:Name="ClassPicker" SelectedIndexChanged="OnClassChanged" Margin="10"  />
-            <Button Text="Usuń klasę" Clicked="OnRemoveClassClicked" Margin="10"  />
-            <Button Text="Dodaj ucznia" Clicked="OnAddStudentClicked" Margin="10"  />
+            <Button x:Name="DeleteClass" Text="Usuń klasę" Clicked="OnRemoveClassClicked" Margin="10"  />
             <Frame HeightRequest="2" BackgroundColor="#3B2B43" CornerRadius="0" Padding="0" Margin="0" HasShadow="False" HorizontalOptions="Fill" />
 
             <Label Text="Losowanie!" StyleClass="HeadLabel" HorizontalOptions="Center"/>
             <Entry x:Name="LuckyNumberEntry" Placeholder="Wpisz szczęśliwy numerek" TextChanged="OnLuckyNumberChanged" Margin="10"  />
-        <Button Text="Losuj ucznia" Clicked="OnPickStudentClicked" Margin="10"  />
+        <Button x:Name="SelectStudent" Text="Losuj ucznia" Clicked="OnPickStudentClicked" Margin="10"  />
             <Frame HeightRequest="2" BackgroundColor="#3B2B43" CornerRadius="0" Padding="0" Margin="0" HasShadow="False" HorizontalOptions="Fill" />
             <Label Text="Lista obecności" StyleClass="HeadLabel" HorizontalOptions="Center"/>
         <ListView x:Name="StudentsListView">
